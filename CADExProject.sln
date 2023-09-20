@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CADExProject", "CADExProject\CADExProject.vcxproj", "{9FD29F31-A668-44DF-B7F2-4D8B2578652E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CADExDll", "CADExDll\CADExDll.vcxproj", "{7E7D5862-94E5-42D3-8D40-D1A11D343AB9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CurvesLibrary", "CADExDll\CADExDll.vcxproj", "{7E7D5862-94E5-42D3-8D40-D1A11D343AB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
