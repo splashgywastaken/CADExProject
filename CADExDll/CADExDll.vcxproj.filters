@@ -36,13 +36,19 @@
     <ClInclude Include="src\model\vector3d\vector_3d.h">
       <Filter>Header Files\model</Filter>
     </ClInclude>
-    <ClInclude Include="src\model\helix3d\helix_3d.h">
+    <ClInclude Include="curves_library.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model\helix3d\helix_3d.h">
+      <Filter>Header Files\model</Filter>
     </ClInclude>
     <ClInclude Include="src\model\ellipse\ellipse.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\model</Filter>
     </ClInclude>
     <ClInclude Include="src\model\circle\circle.h">
+      <Filter>Header Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,14 +68,14 @@
     <ClCompile Include="src\model\vector3d\vector_3d.cpp">
       <Filter>Source Files\model</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\helix3d\helix_3d.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\model\circle\circle.cpp">
+      <Filter>Source Files\model</Filter>
     </ClCompile>
     <ClCompile Include="src\model\ellipse\ellipse.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\model</Filter>
     </ClCompile>
-    <ClCompile Include="src\model\circle\circle.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\model\helix3d\helix_3d.cpp">
+      <Filter>Source Files\model</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

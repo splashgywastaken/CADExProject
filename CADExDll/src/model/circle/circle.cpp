@@ -31,24 +31,22 @@ void curves::circle::set_radius(float value)
 	radius_ = std::make_unique<float>(value);
 }
 
-tools::point3d& curves::circle::get_point(float t) const
+tools::point3d curves::circle::get_point(const float t) const
 {
-	auto point = tools::point3d(
+	return tools::point3d(
 		*radius_ * cos(t),
 		*radius_ * sin(t),
 		.0f
 	);
-	return point;
 }
 
-tools::vector3d& curves::circle::get_derivative(float t) const
+tools::vector3d curves::circle::get_derivative(const float t) const
 {
-	auto vector = tools::vector3d(
+	return tools::vector3d(
 		-*radius_ * sin(t),
 		*radius_ * cos(t),
 		.0f
 	);
-	return vector;
 }
 
 std::string curves::circle::to_string() const

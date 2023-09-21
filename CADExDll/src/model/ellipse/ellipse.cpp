@@ -9,9 +9,10 @@ curves::ellipse::ellipse(float radiix, float radiiy)
 	radiiy_ = std::make_unique<float>(radiiy);
 }
 
-curves::ellipse::ellipse(ellipse& other)
+curves::ellipse::ellipse(const ellipse& other)
 {
-	radiix_ = std::make_unique<float>(other.);
+	radiix_ = std::make_unique<float>(other.get_radiix());
+	radiiy_ = std::make_unique<float>(other.get_radiiy());
 }
 
 curves::ellipse& curves::ellipse::operator=(ellipse&& other) noexcept
@@ -44,24 +45,22 @@ void curves::ellipse::set_radiiy(float value)
 	radiiy_ = std::make_unique<float>(value);
 }
 
-tools::point3d& curves::ellipse::get_point(float t) const
+tools::point3d curves::ellipse::get_point(const float t) const
 {
-	auto point = tools::point3d(
+	return tools::point3d(
 		*radiix_ * cos(t),
 		*radiiy_ * sin(t),
 		0
 	);
-	return point;
 }
 
-tools::vector3d& curves::ellipse::get_derivative(float t) const
+tools::vector3d curves::ellipse::get_derivative(const float t) const
 {
-	auto vector = tools::vector3d(
+	return tools::vector3d(
 		-*radiix_ * sin(t),
 		*radiiy_ * cos(t),
 		0
 	);
-	return vector;
 }
 
 std::string curves::ellipse::to_string() const

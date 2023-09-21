@@ -52,24 +52,22 @@ void curves::helix3d::set_step(float step)
 	step_ = std::make_unique<float>(step);
 }
 
-tools::point3d& curves::helix3d::get_point(float t) const
+tools::point3d curves::helix3d::get_point(const float t) const
 {
-	auto point = tools::point3d(
+	return tools::point3d(
 		*radius_ * cos(t),
 		*radius_ * sin(t),
 		*step_ * t
 	);
-	return point;
 }
 
-tools::vector3d& curves::helix3d::get_derivative(float t) const
+tools::vector3d curves::helix3d::get_derivative(const float t) const
 {
-	auto vector = tools::vector3d(
+	return tools::vector3d(
 		-*radius_ * sin(t),
 		*radius_ * cos(t),
 		*step_
 	);
-	return vector;
 }
 
 std::string curves::helix3d::to_string() const
